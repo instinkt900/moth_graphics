@@ -53,7 +53,7 @@ TEST_CASE("MothRenderer method signatures are stable", "[api][bridge][moth_rende
 
 TEST_CASE("MothImageFactory method signatures are stable", "[api][bridge][moth_image_factory]") {
     std::unique_ptr<moth_ui::IImage>
-         (MothImageFactory::*getImg)(std::filesystem::path const&)              = &MothImageFactory::GetImage;
+         (MothImageFactory::*getImg)(moth_ui::AssetId const&)              = &MothImageFactory::GetImage;
     (void)getImg;
     SUCCEED();
 }

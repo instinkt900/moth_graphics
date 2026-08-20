@@ -7,7 +7,10 @@ namespace moth_graphics::graphics {
         : m_factoryImpl(factoryImpl) {
     }
 
-    std::unique_ptr<::moth_ui::IImage> MothImageFactory::GetImage(std::filesystem::path const& path) {
+    std::unique_ptr<::moth_ui::IImage> MothImageFactory::GetImage(::moth_ui::AssetId const& id) {
+        // This backend loads loose files, so it reads the identity as a path. moth_ui
+        // itself no longer says an identity is one.
+        auto const path = id.path();
         auto texture = m_factoryImpl.GetTexture(path);
         if (!texture) {
             return nullptr;

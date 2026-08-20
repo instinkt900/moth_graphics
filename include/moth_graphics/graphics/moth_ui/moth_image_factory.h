@@ -2,6 +2,7 @@
 
 #include "moth_graphics/graphics/texture_factory.h"
 
+#include <moth_ui/asset_id.h>
 #include <moth_ui/iimage_factory.h>
 #include <moth_ui/graphics/iimage.h>
 
@@ -14,7 +15,7 @@ namespace moth_graphics::graphics {
         explicit MothImageFactory(graphics::TextureFactory& factoryImpl);
         ~MothImageFactory() override = default;
 
-        std::unique_ptr<moth_ui::IImage> GetImage(std::filesystem::path const& path) override;
+        std::unique_ptr<moth_ui::IImage> GetImage(moth_ui::AssetId const& id) override;
 
     private:
         graphics::TextureFactory& m_factoryImpl;
