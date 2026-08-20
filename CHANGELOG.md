@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 Entries are generated automatically from git history using [git-cliff](https://github.com/orhun/git-cliff).
 
+## [1.3.0] - 2026-08-20
+### Features
+- [**breaking**] MothImageFactory takes an AssetId
+
+### Bug Fixes
+- Linear-filter SDL glyph atlas so scaled text stays smooth
+- Bump the moth_ui pin in the tests conanfile too
+
+### Miscellaneous
+- Require moth_ui 1.8.0 and bump to 1.3.0
+
 ## [1.2.0] - 2026-07-14
 ### Features
 - Add filled polygon and cached triangle drawing to IGraphics
