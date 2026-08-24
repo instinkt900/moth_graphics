@@ -55,7 +55,13 @@ class MothGraphics(ConanFile):
             self.requires("vulkan-headers/1.3.243.0", transitive_headers=True)
             self.requires("vulkan-loader/1.3.243.0")
             self.requires("vulkan-memory-allocator/3.0.1", transitive_headers=True)
-        self.requires("spdlog/[~1.14]", transitive_headers=True)
+        # spdlog decides fmt for the whole moth stack, because it pins one
+        # version exactly: 1.14 pins fmt 10.2.1 and 1.17 pins fmt 12.1.0.
+        # moth_ui accepts fmt 10 through 12, so it follows whichever is here.
+        # The Camina engine takes spdlog 1.17, so anything below it splits the
+        # stack across two fmt versions and every consumer holding both halves
+        # has to pin one by hand. See instinkt900/camina#392.
+        self.requires("spdlog/[~1.17]", transitive_headers=True)
         self.requires("moth_ui/[>=1.8 <2]", transitive_headers=True)
 
     def system_requirements(self):
