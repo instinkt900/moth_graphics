@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 Entries are generated automatically from git history using [git-cliff](https://github.com/orhun/git-cliff).
 
+## [1.3.1] - 2026-08-24
+### Bug Fixes
+- Take the spdlog that pins the fmt the rest of the stack uses
+
+### Changes
+- Bump version from 1.3.0 to 1.3.1
+
 ## [1.3.0] - 2026-08-20
 ### Features
 - [**breaking**] MothImageFactory takes an AssetId
