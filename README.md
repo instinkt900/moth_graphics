@@ -1,5 +1,12 @@
 # Moth Graphics
 
+> [!IMPORTANT]
+> **This repository is archived.** moth_graphics now lives in [moth_toolkit](https://github.com/instinkt900/moth_toolkit) as the
+> [`moth::gfx` module](https://github.com/instinkt900/moth_toolkit/tree/main/modules/gfx), still published as the
+> `moth_graphics` Conan package (2.x and later). The glue between `moth::ui` and the
+> renderer, including `Application`, is now the [`moth::bridge` module](https://github.com/instinkt900/moth_toolkit/tree/main/modules/bridge).
+> New work, issues and releases happen there.
+
 [![Build Status](https://github.com/instinkt900/moth_graphics/actions/workflows/build-test.yml/badge.svg)](https://github.com/instinkt900/moth_graphics/actions/workflows/build-test.yml)
 [![Upload Status](https://github.com/instinkt900/moth_graphics/actions/workflows/upload-release.yml/badge.svg)](https://github.com/instinkt900/moth_graphics/actions/workflows/upload-release.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
